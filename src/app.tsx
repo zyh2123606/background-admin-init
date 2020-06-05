@@ -7,6 +7,7 @@ import Loading from './loading'
 import umiRequest from '@/utils/request'
 import { getCurrentUser } from '@/utils/appData'
 import { history } from 'umi'
+import 'nprogress/nprogress.css'
 import NProgress from 'nprogress'
 
 export const dva = {

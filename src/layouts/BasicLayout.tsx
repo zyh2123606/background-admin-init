@@ -8,7 +8,6 @@ import moment from 'moment'
 import { useLocation, useDispatch } from 'umi'
 import zhCN from 'antd/es/locale/zh_CN'
 import 'moment/locale/zh-cn'
-import 'nprogress/nprogress.css'
 import Style from './layout.less'
 
 moment.locale('en')

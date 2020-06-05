@@ -13,6 +13,9 @@ export default defineConfig({
 		skipModelValidate: true
 	},
 	hash: true,
+	dynamicImport: {
+		loading: '@/loadingComponent'	
+	},
 	targets: {
 		ie: 11
 	},
