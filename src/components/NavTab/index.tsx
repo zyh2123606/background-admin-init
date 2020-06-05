@@ -1,26 +1,26 @@
-import React, { useEffect, useState, FunctionComponent } from 'react';
-import { Tabs } from 'antd';
-import Style from './index.less';
-import { IconFont } from '@/components';
-import { NavTabsType } from '@/utils/interface';
-import pathToRegexp from 'path-to-regexp';
-import { history, useStore, useDispatch } from 'umi';
+import React, { useEffect, useState, FunctionComponent } from "react";
+import { Tabs } from "antd";
+import Style from "./index.less";
+import { IconFont } from "@/components";
+import { NavTabsType } from "@/utils/interface";
+import pathToRegexp from "path-to-regexp";
+import { history, useStore, useDispatch } from "umi";
 
 const { TabPane } = Tabs;
 const NavTab: FunctionComponent = () => {
   const { global } = useStore().getState();
   const navTabs: NavTabsType[] = global.navTabs;
   const dispatch = useDispatch();
-  const [tabKey, setTabKey] = useState('');
+  const [tabKey, setTabKey] = useState("");
   useEffect(() => {
     setTabKey(getCurrentKeyByPathname());
   }, [location.pathname, navTabs]);
   const getCurrentKeyByPathname = (): string => {
     const tab = navTabs.find(item =>
-      pathToRegexp(location.pathname).exec(item.path),
+      pathToRegexp(location.pathname).exec(item.path)
     );
     if (tab) return tab.path;
-    return 'NULL';
+    return "NULL";
   };
   const navTabChange = (key: string) => {
     const currentTab = navTabs.find(item => item.path === key);
@@ -32,10 +32,10 @@ const NavTab: FunctionComponent = () => {
       | string
       | React.MouseEvent<Element, MouseEvent>
       | React.KeyboardEvent<Element>,
-    action: 'add' | 'remove',
+    action: "add" | "remove"
   ) => {
-    if (action === 'remove') {
-      dispatch({ type: 'global/delNavTabKey', path: targetKey });
+    if (action === "remove") {
+      dispatch({ type: "global/delNavTabKey", path: targetKey });
       const index = navTabs.findIndex(item => item.path === targetKey);
       const prevTab = navTabs.find((_, idx) => index - 1 === idx);
       const nextTab = navTabs.find((_, idx) => idx === index + 1);
