@@ -1,0 +1,43 @@
+@import '~antd/lib/style/themes/default.less';
+.header {
+  background: #fff;
+  height: 45px;
+  padding: 0;
+  min-width: 500px;
+  .menufold {
+    border-right: #f5f5f5 solid 1px;
+    cursor: pointer;
+    transition: all 0.25s linear;
+    &:hover {
+      background: #f5f5f5;
+    }
+  }
+  .fullscreen {
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  .avatar {
+    cursor: pointer;
+    background-color: #345cff;
+  }
+}
+:global {
+  .ant-menu.ant-menu-dark,
+  .ant-menu-dark .ant-menu-sub {
+    line-height: 45px;
+  }
+  .ant-menu-dark.ant-menu-horizontal > .ant-menu-item,
+  .ant-menu-dark.ant-menu-horizontal > .ant-menu-submenu {
+    height: 45px;
+    color: #001529;
+  }
+  .ant-menu.ant-menu-dark,
+  .ant-menu-dark .ant-menu-sub {
+    background-color: #fff;
+  }
+  .ant-menu.ant-menu-dark .ant-menu-item-selected,
+  .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+    color: #fff;
+  }
+}

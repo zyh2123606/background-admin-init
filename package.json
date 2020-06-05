@@ -1,0 +1,49 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "umi dev",
+    "start-yapi": "cross-env MOCK=none UMI_ENV=yapi umi dev",
+    "build": "cross-env UMI_ENV=prod umi build",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.2.1",
+    "@umijs/preset-react": "1.x",
+    "@umijs/test": "^3.2.3",
+    "axios": "^0.19.2",
+    "classnames": "^2.2.6",
+    "cy-element": "^1.0.2",
+    "cy-mathjs": "^1.0.0",
+    "lint-staged": "^10.0.7",
+    "nprogress": "^0.2.0",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-placeholder": "^4.0.2",
+    "screenfull": "^5.0.2",
+    "umi": "^3.2.3",
+    "viser-react": "^2.4.8",
+    "yorkie": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.10",
+    "@types/nprogress": "^0.2.0",
+    "@types/redux-logger": "^3.0.8",
+    "cross-env": "^7.0.2",
+    "redux-logger": "^3.0.6"
+  }
+}

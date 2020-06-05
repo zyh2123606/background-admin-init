@@ -1,0 +1,28 @@
+@import '~antd/lib/style/themes/default.less';
+@imgUrl: '../../assets/images';
+
+.container {
+  background-color: #fff;
+}
+.menu-wrapper {
+  height: 100%;
+}
+.log {
+  height: 45px;
+  margin: 0;
+  padding: 0;
+  background: url('@{imgUrl}/logo.svg') no-repeat 20px 70%;
+  background-size: auto 25px;
+  background-color: #fff;
+  border-right: 1px solid #f0f0f0;
+}
+:global {
+  .ant-menu-root {
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
