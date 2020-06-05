@@ -5,7 +5,6 @@
     "start-yapi": "cross-env MOCK=none UMI_ENV=yapi umi dev",
     "build": "cross-env UMI_ENV=prod umi build",
     "postinstall": "umi generate tmp",
-    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage"
   },
