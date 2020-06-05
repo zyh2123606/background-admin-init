@@ -1,9 +1,9 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent } from 'react'
 
 interface IProps {
-  children: React.ReactElement;
+	children: React.ReactElement
 }
 const AuthLayout: FunctionComponent<IProps> = ({ children }) => {
-  return children;
-};
-export default AuthLayout;
+	return children
+}
+export default AuthLayout

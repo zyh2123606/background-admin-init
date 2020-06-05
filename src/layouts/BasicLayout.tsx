@@ -32,22 +32,24 @@ const BasicLayout: FunctionComponent<IProps> = ({ route, children }) => {
         if (authRoute && authRoute.path !== '/home' && authRoute.path !== '/' && authRoute?.authority)
             dispatch({ type: 'global/addNavTabKey', path: authRoute.path, name: authRoute.name })
     }, [location.pathname])
-    return <Layout className={Style.container}>
-        <SlideMenu menuData={[]} />
-        <Layout>
-            <Header />
-            <NavTab />
-            <Content>
-                <section className={Style.contentWrapper}>
-                    <Authorized
-                        authority={authRoute?.authority}
-                        noMatch={authRoute ? undefined : notFound}>
-                        {children}
-                    </Authorized>
-                </section>
-            </Content>
+    return <ConfigProvider locale={zhCN}>
+        <Layout className={Style.container}>
+            <SlideMenu />
+            <Layout>
+                <Header />
+                <NavTab />
+                <Content>
+                    <section className={Style.contentWrapper}>
+                        <Authorized
+                            authority={authRoute?.authority}
+                            noMatch={authRoute ? undefined : notFound}>
+                            {children}
+                        </Authorized>
+                    </section>
+                </Content>
+            </Layout>
         </Layout>
-    </Layout>
+    </ConfigProvider>
 }
 
 export default BasicLayout

@@ -1,6 +1,6 @@
 export default {
-  define: {
-    baseUrl: '',
-    imgPrefix: '',
-  },
-};
+	define: {
+		baseUrl: '',
+		imgPrefix: ''
+	}
+}
