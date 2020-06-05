@@ -1,7 +1,7 @@
-import React, { FunctionComponent } from 'react';
-import { View } from 'cy-element';
+import React, { FunctionComponent } from 'react'
+import { View } from 'cy-element'
 
 const MenuManager = () => {
-  return <View></View>;
-};
-export default MenuManager;
+    return <View></View>
+}
+export default MenuManager
