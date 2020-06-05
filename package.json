@@ -3,10 +3,7 @@
   "scripts": {
     "start": "umi dev",
     "start-yapi": "cross-env MOCK=none UMI_ENV=yapi umi dev",
-    "build": "cross-env UMI_ENV=prod umi build",
-    "postinstall": "umi generate tmp",
-    "test": "umi-test",
-    "test:coverage": "umi-test --coverage"
+    "build": "cross-env UMI_ENV=prod umi build"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
