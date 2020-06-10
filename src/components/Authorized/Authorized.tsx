@@ -18,8 +18,7 @@ const Authorized: React.FunctionComponent<IProps> = ({
 			title="403"
 			subTitle="您没有访问的权限，请联系管理员"
 		/>
-	),
-	...rest
+	)
 }) => {
 	const childrenRender: React.ReactNode =
 		typeof children === 'undefined' ? null : children
