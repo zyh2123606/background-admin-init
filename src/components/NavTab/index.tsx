@@ -39,7 +39,7 @@ const NavTab: FunctionComponent = () => {
     return <section className={Style.container}>
         <Tabs type='editable-card'
             activeKey={tabKey}
-            hideAdd={false}
+            hideAdd={true}
             onEdit={handleEdit}
             onChange={navTabChange}>
             {navTabs.map((item, index: number) => (
